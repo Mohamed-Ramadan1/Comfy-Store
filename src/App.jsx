@@ -1,5 +1,26 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  About,
+  Cart,
+  Checkout,
+  Error,
+  HomeLayout,
+  Landing,
+  Login,
+  Orders,
+  Products,
+  Register,
+  SingleProduct,
+} from "./pages";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+  },
+]);
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
