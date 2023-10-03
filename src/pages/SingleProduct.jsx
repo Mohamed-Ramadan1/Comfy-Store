@@ -1,5 +1,5 @@
 import { useLoaderData, Link } from "react-router-dom";
-import { formatPrice, customFetch } from "../utils";
+import { formatPrice, customFetch, generateAmountOptions } from "../utils";
 import { useState } from "react";
 
 export const loader = async ({ params }) => {
@@ -80,9 +80,10 @@ const SingleProduct = () => {
               value={amount}
               onChange={handleAmount}
             >
-              <option value={1}>1</option>
+              {/* <option value={1}>1</option>
               <option value={2}>2</option>
-              <option value={3}>3</option>
+              <option value={3}>3</option> */}
+              {generateAmountOptions(20)}
             </select>
           </div>
           {/* CART BUTTON */}
