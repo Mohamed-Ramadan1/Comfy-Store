@@ -1,48 +1,4 @@
-## Challenge (21) - Format Price
-
-- payment providers need in smallest unit
-  - in this case cents
-- in utils setup a function to format price
-- utilize in ProductsGrid
-
-## Solution (21) - Format Price
-
-- utils/index.js
-
-```js
-export const formatPrice = (price) => {
-  const dollarsAmount = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  }).format((price / 100).toFixed(2));
-  return dollarsAmount;
-};
-```
-
-## Challenge (22) - Single Product
-
-- complete in multiple steps
-- fetch and render single product
-- don't forget about the colors and amount options
-- extra credit - set amount options dynamically
-
 ### SingleProduct.jsx
-
-1. Import Dependencies:
-
-   - Import `useLoaderData` from `'react-router-dom'`.
-   - Import `formatPrice`, `customFetch`, and `useState` from `'../utils'`.
-   - Import `Link` from `'react-router-dom'`.
-
-2. Define Loader Function:
-
-   - Define a loader function that fetches product data based on the `params.id`.
-   - Use `customFetch` to fetch the product data from `/products/${params.id}`.
-   - Return an object containing the fetched product data.
-
-3. Create SingleProduct Component:
-
-   - Define a functional component named `SingleProduct`.
 
 4. Component Structure:
 
