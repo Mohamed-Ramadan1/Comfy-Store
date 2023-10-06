@@ -15,3 +15,7 @@ export { default as PaginationContainer } from "./PaginationContainer";
 export { default as FormSelect } from "./FormSelect";
 export { default as FormRange } from "./FormRange";
 export { default as Loading } from "./Loading";
+
+export { default as CartItemsList } from "./CartItemsList";
+export { default as CartTotals } from "./CartTotals";
+export { default as CartItem } from "./CartItem";

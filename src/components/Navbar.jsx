@@ -15,7 +15,6 @@ const getThemeFromLocalStorage = () => {
 };
 
 const Navbar = () => {
-  const cartTotal = useSelector((state) => state.cartState.cartTotal);
   const [theme, setTheme] = useState(getThemeFromLocalStorage());
 
   const handleTheme = () => {
@@ -23,6 +22,9 @@ const Navbar = () => {
     const newTheme = theme === winter ? dracula : winter;
     setTheme(newTheme);
   };
+
+  // Total items in the cart.
+  const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -76,7 +78,7 @@ const Navbar = () => {
             <div className="indicator">
               <BsCart3 className="h-6 w-6" />
               <span className="badge badge-sm badge-primary indicator-item">
-                {cartTotal}
+                {numItemsInCart}
               </span>
             </div>
           </NavLink>
